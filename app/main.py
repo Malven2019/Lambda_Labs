@@ -1,11 +1,11 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
 
 from app import db, ml, viz
 
 description = """
-Edit your app's title and description. See [https://fastapi.tiangolo.com/tutorial/metadata/](https://fastapi.tiangolo.com/tutorial/metadata/)
+This FastAPI app is a demo for the Labs 29 DS for Malven.
 
 To use these interactive docs:
 - Click on an endpoint below
@@ -16,7 +16,7 @@ To use these interactive docs:
 """
 
 app = FastAPI(
-    title='DS API',
+    title="Malven's Labs 29 Practice Demo",
     description=description,
     docs_url='/',
 )

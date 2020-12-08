@@ -1,6 +1,6 @@
 """Database functions"""
 
-import os
+import os  # Auto PEP Compliance
 
 from dotenv import load_dotenv
 from fastapi import APIRouter
@@ -14,7 +14,7 @@ router = APIRouter()
 
 @router.get('/info')
 async def get_url():
-    """Verify we can connect to the database, 
+    """Verify we can connect to the database,
     and return the database URL, in this format:
 
     dialect://user:password@host/dbname
@@ -22,3 +22,8 @@ async def get_url():
     with engine.connect() as con:
         url_without_password = con.engine.url.__repr__()
         return {'url': url_without_password}
+
+
+@router.get('/hello')
+async def hello_world():
+    return {'Hello': 'World'}
