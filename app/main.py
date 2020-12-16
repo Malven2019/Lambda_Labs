@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app import db, ml, viz
+from app import db, ml, viz # imports from my code I have written
 
 description = """
 This FastAPI app is a demo for the Labs 29 DS for Malven.
